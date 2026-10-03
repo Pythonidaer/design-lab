@@ -3,8 +3,56 @@ const toggle=(key,label,value)=>({key,label,value,type:'checkbox'});
 const select=(key,label,options,value)=>({key,label,options,value,type:'select'});
 const color=(key,label,value)=>({key,label,value,type:'color'});
 const text=(key,label,value)=>({key,label,value,type:'text'});
+const systemFaceGroups=[
+['Sans serif',[
+['System sans',"ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"],
+['Arial','Arial, Helvetica, sans-serif'],
+['Helvetica',"'Helvetica Neue', Helvetica, Arial, sans-serif"],
+['Verdana','Verdana, Geneva, sans-serif'],
+['Tahoma','Tahoma, Verdana, sans-serif'],
+['Trebuchet MS',"'Trebuchet MS', sans-serif"],
+['Gill Sans',"'Gill Sans', 'Gill Sans MT', Calibri, sans-serif"],
+['Segoe UI',"'Segoe UI', sans-serif"],
+['Calibri','Calibri, Candara, sans-serif'],
+['Avenir',"Avenir, 'Avenir Next', sans-serif"],
+['Futura',"Futura, 'Trebuchet MS', sans-serif"],
+['Optima','Optima, Candara, sans-serif'],
+['Lucida Sans',"'Lucida Sans', 'Lucida Grande', 'Lucida Sans Unicode', sans-serif"],
+['Century Gothic',"'Century Gothic', CenturyGothic, sans-serif"]
+]],
+['Serif',[
+['System serif',"ui-serif, Georgia, 'Times New Roman', serif"],
+['Georgia','Georgia, serif'],
+['Times New Roman',"'Times New Roman', Times, serif"],
+['Palatino',"Palatino, 'Palatino Linotype', 'Book Antiqua', serif"],
+['Garamond',"Garamond, 'Palatino Linotype', serif"],
+['Baskerville','Baskerville, Georgia, serif'],
+['Cambria','Cambria, Georgia, serif'],
+['Didot',"Didot, 'Bodoni MT', serif"],
+['Rockwell','Rockwell, Georgia, serif'],
+['American Typewriter',"'American Typewriter', Courier, serif"],
+['Charter',"Charter, 'Bitstream Charter', Georgia, serif"],
+['Hoefler Text',"'Hoefler Text', Garamond, serif"],
+['Iowan Old Style',"'Iowan Old Style', Palatino, serif"]
+]],
+['Monospace',[
+['System mono',"ui-monospace, 'SF Mono', Menlo, Consolas, monospace"],
+['Courier New',"'Courier New', Courier, monospace"],
+['Menlo','Menlo, Monaco, Consolas, monospace'],
+['Monaco','Monaco, Menlo, Consolas, monospace'],
+['Consolas','Consolas, Menlo, Monaco, monospace'],
+['Lucida Console',"'Lucida Console', Monaco, monospace"]
+]],
+['Display and script',[
+['Impact',"Impact, 'Arial Narrow', sans-serif"],
+['Comic Sans MS',"'Comic Sans MS', 'Comic Sans', cursive"],
+['Brush Script',"'Brush Script MT', cursive"],
+['Papyrus','Papyrus, fantasy']
+]]
+];
+const systemFaceStack=Object.fromEntries(systemFaceGroups.flatMap(group=>group[1]));
 const lessons=[
-{group:'Visual foundations',title:'Typography',description:'Typography is how you shape written information using font, size, weight, and line height. Good typography helps people read comfortably and distinguish headings from supporting details. A larger font is not automatically better: the relationship between sizes and the space between lines matters.',challenge:'Set the body text to 18px. Then squeeze the line height and notice when reading becomes harder.',notice:'Look at how many words fit on each line and whether your eye can find the next line easily. Keep body text comfortably readable and use a clear difference between headings and body text.',controls:[range('size','Body size',12,26,16,'px'),range('leading','Line height',1,2.2,1.6,'',.1),select('font','Typeface',['System sans','Georgia serif','Monospace'],'System sans'),range('heading','Heading size',18,44,28,'px')],kind:'type'},
+{group:'Visual foundations',title:'Typography',description:'Typography is how you shape written information using font, size, weight, and line height. Good typography helps people read comfortably and distinguish headings from supporting details. A larger font is not automatically better: the relationship between sizes and the space between lines matters.',challenge:'Set the body text to 18px. Then squeeze the line height and notice when reading becomes harder. Switch between a sans, a serif, and a monospace face.',notice:'Look at how many words fit on each line and whether your eye can find the next line easily. The same words change width and tone when the typeface changes. A listed face appears only when it is installed on this computer. Keep body text comfortably readable and use a clear difference between headings and body text.',controls:[range('size','Body size',12,26,16,'px'),range('leading','Line height',1,2.2,1.6,'',.1),select('font','Typeface',systemFaceGroups.map(group=>({label:group[0],items:group[1].map(face=>face[0])})),'System sans'),range('heading','Heading size',18,44,28,'px')],kind:'type'},
 {group:'Visual foundations',title:'Color & contrast',description:'Color can communicate emphasis, mood, and status. Contrast is the difference in luminance between foreground and background; it affects whether text is readable. Do not rely on color alone to communicate an error or success: include words or another visible cue.',challenge:'Choose similar text and background colors, then increase their difference until the normal-text AA check passes.',notice:'The ratio below is calculated from your selected colors. WCAG AA requires at least 4.5:1 for normal text and 3:1 for large text. Passing one color pair does not establish that an entire interface is accessible.',controls:[color('fg','Text color','#243044'),color('bg','Background','#ffffff'),color('accent','Button color','#2334ea')],kind:'color'},
 {group:'Visual foundations',title:'Spacing & proximity',description:'Spacing determines how crowded an interface feels. Proximity creates relationships: items placed close together usually look related. Keep a label near its field, and leave more space between separate groups than between items within a group.',challenge:'Make the gap between fields smaller than the gap between sections. Then reverse the relationship.',notice:'You should be able to see which label belongs to which field without drawing an imaginary line. Large amounts of space are useful only when they clarify a relationship or improve comfort.',controls:[range('padding','Outer padding',8,48,28,'px'),range('gap','Within a group',2,32,8,'px'),range('section','Between groups',4,56,28,'px')],kind:'spacing'},
 {group:'Visual foundations',title:'Columns & layout',description:'Layout gives information a structure. Columns can make related items easier to compare, but too many columns squeeze content and slow scanning. Choose the arrangement around what people need to read or compare, rather than filling every available inch.',challenge:'Compare one and three columns. Increase the gap and watch how the available reading space changes.',notice:'Columns work when each item still has enough width. A real responsive layout usually reduces the column count as available space shrinks.',controls:[range('columns','Columns',1,3,2),range('gap','Column gap',4,32,16,'px'),select('align','Text alignment',['Left','Center'],'Left')],kind:'columns'},
@@ -26,15 +74,17 @@ const lessons=[
 ];
 let current=0,state={},timer=null,actionState={}; const $=id=>document.getElementById(id);
 function esc(v){return String(v).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));}
+function optionList(options,value){const item=o=>'<option'+(o===value?' selected':'')+'>'+esc(o)+'</option>';if(options[0]&&typeof options[0]==='object')return options.map(g=>'<optgroup label="'+esc(g.label)+'">'+g.items.map(item).join('')+'</optgroup>').join('');return options.map(item).join('');}
+function faceInstalled(name){const stack=systemFaceStack[name]||'';const primary=(stack.split(',')[0]||'').trim().replace(/^['"]|['"]$/g,'');if(!primary||/^(ui-[\w-]+|system-ui|-apple-system|BlinkMacSystemFont|sans-serif|serif|monospace|cursive|fantasy)$/.test(primary))return true;const canvas=faceInstalled.canvas||(faceInstalled.canvas=document.createElement('canvas'));const ctx=canvas.getContext('2d');if(!ctx)return true;const sample='mmmmmmmmmmlli';const width=font=>{ctx.font='72px '+font;return ctx.measureText(sample).width;};const quoted="'"+primary.replace(/'/g,'')+"'";const mono=width('monospace'),sans=width('sans-serif');return width(quoted+', monospace')!==mono||width(quoted+', sans-serif')!==sans;}
 function card(){return '<h3>Make room for a new skill.</h3><p>Join a hands-on weekend workshop. Explore a new idea, work at your own pace, and leave with something you made.</p><p class="small">Saturday · 10:00 AM · 12 places available</p><button class="primary" data-act="reserve">Reserve a place</button>';}
 function tiles(n=3){return Array.from({length:n},(_,i)=>'<div class="tile"><h4>'+['Creative writing','Photography','Printmaking'][i]+'</h4><p>'+['Find your voice.','See things differently.','Make an original print.'][i]+'</p></div>').join('');}
 function luminance(hex){let rgb=hex.match(/\w\w/g).map(v=>parseInt(v,16)/255).map(v=>v<=.04045?v/12.92:((v+.055)/1.055)**2.4);return .2126*rgb[0]+.7152*rgb[1]+.0722*rgb[2];}
 function ratio(a,b){let x=luminance(a),y=luminance(b);return(Math.max(x,y)+.05)/(Math.min(x,y)+.05);}
 function initialize(index){clearTimeout(timer);current=index;state=Object.fromEntries(lessons[index].controls.map(c=>[c.key,c.value]));actionState={};renderLesson();}
 function renderLesson(){const l=lessons[current];$('chapter').textContent=l.group+' / '+String(current+1).padStart(2,'0');$('title').textContent=l.title;$('description').textContent=l.description;$('challenge').textContent=l.challenge;$('notice').textContent=l.notice;$('position').textContent=(current+1)+' / '+lessons.length;$('previous').disabled=current===0;$('next').disabled=current===lessons.length-1;document.querySelectorAll('nav button').forEach((b,i)=>b.setAttribute('aria-current',i===current?'true':'false'));
-$('controls').innerHTML=l.controls.map(c=>{let id='c-'+c.key,v=state[c.key],input;if(c.type==='select')input='<select id="'+id+'" data-key="'+c.key+'">'+c.options.map(o=>'<option'+(o===v?' selected':'')+'>'+esc(o)+'</option>').join('')+'</select>';else input='<input id="'+id+'" data-key="'+c.key+'" type="'+c.type+'" '+(c.type==='range'?'min="'+c.min+'" max="'+c.max+'" step="'+c.step+'" ':'')+(c.type==='checkbox'?(v?'checked':''):'value="'+esc(v)+'"')+'>';return '<div class="control"><label for="'+id+'">'+c.label+(c.type==='range'?'<output id="o-'+c.key+'">'+v+c.unit+'</output>':'')+(c.type==='checkbox'?input:'')+'</label>'+(c.type==='checkbox'?'':input)+'</div>';}).join('');renderPreview();}
+$('controls').innerHTML=l.controls.map(c=>{let id='c-'+c.key,v=state[c.key],input;if(c.type==='select')input='<select id="'+id+'" data-key="'+c.key+'">'+optionList(c.options,v)+'</select>';else input='<input id="'+id+'" data-key="'+c.key+'" type="'+c.type+'" '+(c.type==='range'?'min="'+c.min+'" max="'+c.max+'" step="'+c.step+'" ':'')+(c.type==='checkbox'?(v?'checked':''):'value="'+esc(v)+'"')+'>';return '<div class="control"><label for="'+id+'">'+c.label+(c.type==='range'?'<output id="o-'+c.key+'">'+v+c.unit+'</output>':'')+(c.type==='checkbox'?input:'')+'</label>'+(c.type==='checkbox'?'':input)+'</div>';}).join('');renderPreview();}
 function renderPreview(){const l=lessons[current],s=state;let h='',style='',extra='',k=l.kind;
-if(k==='type'){style='font-size:'+s.size+'px;line-height:'+s.leading+';font-family:'+(s.font==='Georgia serif'?'Georgia,serif':s.font==='Monospace'?'ui-monospace,monospace':'inherit');h=card().replace('<h3>','<h3 style="font-size:'+s.heading+'px">');}
+if(k==='type'){style='font-size:'+s.size+'px;line-height:'+s.leading+';font-family:'+(systemFaceStack[s.font]||'inherit');h=card().replace('<h3>','<h3 style="font-size:'+s.heading+'px">');if(!faceInstalled(s.font))extra='<div class="legend">'+esc(s.font)+' is not installed on this computer, so the example uses the next available face.</div>';}
 if(k==='color'){style='color:'+s.fg+';background:'+s.bg;let r=ratio(s.fg,s.bg),br=ratio('#ffffff',s.accent);h=card().replace('class="primary"','class="primary" style="background:'+s.accent+';border-color:'+s.accent+'"');extra='<div class="contrast-result">Text: <strong>'+r.toFixed(2)+':1</strong> · '+(r>=4.5?'Passes':'Below')+' normal-text AA<br>White button text: <strong>'+br.toFixed(2)+':1</strong> · '+(br>=4.5?'Passes':'Below')+' normal-text AA</div>';}
 if(k==='spacing'){style='padding:'+s.padding+'px';h='<h3>Your reservation</h3><div style="margin-bottom:'+s.section+'px"><label style="margin-bottom:'+s.gap+'px" for="name">Your name</label><input id="name" placeholder="Alex Morgan"></div><div><label style="margin-bottom:'+s.gap+'px" for="email">Email address</label><input id="email" type="email" placeholder="alex@example.com"></div><button class="primary" style="margin-top:'+s.section+'px" data-act="reserve">Reserve a place</button>';}
 if(k==='columns'){h='<h3>Choose a workshop</h3><div class="samplegrid" style="grid-template-columns:repeat('+s.columns+',minmax(0,1fr));gap:'+s.gap+'px;text-align:'+s.align.toLowerCase()+'">'+tiles()+'</div>';}
