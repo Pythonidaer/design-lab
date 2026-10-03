@@ -1,5 +1,7 @@
 # Design Lab
 
+The website is published at https://pythonidaer.github.io/design-lab/
+
 Exact website files from the published Design Lab, exported October 3, 2026.
 
 ## Contents
@@ -33,7 +35,9 @@ Then open http://localhost:8000 in your browser.
 ## Hosting
 
 This is a static website suitable for Vercel or GitHub Pages.
-When deploying, serve the directory containing index.html.
+GitHub Pages already serves this repository from `main` at
+https://pythonidaer.github.io/design-lab/
+When deploying elsewhere, serve the directory containing index.html.
 
 The exported files preserve the app's appearance and functionality.
 The original ChatGPT-hosted site's access restrictions are hosting settings
