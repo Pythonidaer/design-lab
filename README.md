@@ -211,3 +211,5 @@ Skill bars use compact 34px minimum rows with 3px gaps, names and percentages in
 The Course outline toggle works at every viewport width and remembers its collapsed state. Desktop/tablet keep the outline alongside an independently scrolling main column; mobile uses an overlay that closes after choosing a lesson. The outline scrolls independently for long courses. Reports, lessons and learner Settings scroll within the viewport shell. Sidebar course-progress text/bar and the pie interaction hint are omitted; pie hover/focus details remain available.
 
 Learner navigation uses header icons for Reports, Settings and Course outline, with accessible names and tooltips. The Course/Reports tab bar is removed. Reports and Settings offer Back to course; returning preserves the selected lesson.
+
+Entering the LMS starts at the 1440px Desktop preview. Later device switches remain selected while editing the LMS. The learner header uses content height rather than sharing remaining viewport space with the main panel.

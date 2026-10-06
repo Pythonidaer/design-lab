@@ -1,10 +1,11 @@
 /* Each preview has its own viewport; width-based media queries run inside it. */
-let previewWidth=390,previewMode='mobile',previewFit=true,previewFocus=null;
+let previewWidth=390,previewMode='mobile',previewFit=true,previewFocus=null,previewKind=null;
 function previewDocument(){return document.getElementById('preview-frame')?.contentDocument;}
 function previewElement(id){return previewDocument()?.getElementById(id);}
 function previewQuery(selector){return previewDocument()?.querySelector(selector);}
 function previewHead(title='Design Lab preview',kind=''){return '<!doctype html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><base href="'+esc(document.baseURI)+'"><title>'+esc(title)+'</title>'+(kind==='lms'?'<link rel="stylesheet" href="lms.css">':'<link rel="stylesheet" href="style.css"><link rel="stylesheet" href="workshop.css"><link rel="stylesheet" href="component-bench.css"><link rel="stylesheet" href="lms.css">')+'<style>html,body{margin:0;min-height:100%;background:#f6f7fb}body{padding:24px}.demo{margin:auto}.preview-content{width:100%;display:flex;align-items:center;flex-direction:column}.legend,.contrast-result{max-width:900px;width:100%}body.workshop-preview,body.bench-preview,body.lms-preview{padding:0!important;background:transparent}.workshop-preview .dl-site{min-height:100vh}body.direction-preview .demo{max-width:1000px}@media(max-width:500px){body{padding:12px}}</style></head>';}
 function renderViewport(h,style,extra,kind,group){
+if(kind==='lms'&&previewKind!=='lms')chooseViewport('desktop',1440);previewKind=kind;
 const oldScroll=previewDocument()?.documentElement?.scrollTop||0;const host=document.getElementById('preview');host.innerHTML='<div class="viewport-stage"><iframe id="preview-frame" title="Live component preview" sandbox="allow-same-origin allow-popups"></iframe></div>';const frame=document.getElementById('preview-frame');if(kind==='lms')frame.setAttribute('sandbox','allow-same-origin allow-popups allow-forms allow-downloads');
 frame.addEventListener('load',()=>{
 if(document.getElementById('preview-frame')!==frame)return;

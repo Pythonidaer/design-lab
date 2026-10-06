@@ -7,7 +7,7 @@ body.lms-export-body{margin:0}
 
 /* Media occupies the learner column; reading controls remain below it. */
 #lms-root{display:flex;flex-direction:column;font-family:var(--lms-body-font,system-ui,sans-serif)!important;line-height:var(--lms-leading,1.65)}
-.lms-header,.lms-shell{flex:1;min-height:0}.lms-outline{align-self:stretch}
+.lms-header{flex:0 0 auto}.lms-shell{flex:1;min-height:0}.lms-outline{align-self:stretch}
 #lms-root h1,#lms-root h2,#lms-root h3{font-family:var(--lms-heading-font,system-ui,sans-serif);letter-spacing:-.02em}
 .lms-main.lms-media-page{max-width:none;padding:0}.lms-player-stage{position:relative;width:100%;min-height:max(360px,calc(100vh - 290px));background:var(--lms-surface)}
 .lms-slide.lms-player-stage{display:flex;align-items:center;justify-content:center;border:0;border-radius:0;box-shadow:none;padding:clamp(64px,6vw,100px)}
