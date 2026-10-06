@@ -29,3 +29,9 @@ body.lms-export-body{margin:0}
 #lms-root .lms-preference{display:flex;align-items:center;gap:12px;margin:24px 0}.lms-preference input{width:20px;height:20px;accent-color:var(--lms-brand);flex-shrink:0}
 
 .lms-lesson-title{display:flex;align-items:center;justify-content:space-between;gap:10px;min-width:0}.lms-lesson-title>span{min-width:0}.lms-complete-icon{flex-shrink:0;color:var(--lms-text)}
+
+/* Results use a restrained dashboard and accessible pie-chart legend. */
+.lms-report-heading{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}.lms-report-heading h2{margin-bottom:0}
+.lms-report-metrics{grid-template-columns:repeat(3,minmax(0,1fr));gap:0;border-block:1px solid var(--lms-border)}.lms-report-metrics article{border:0;border-radius:0;background:transparent;padding:20px 12px}.lms-report-metrics article+article{border-left:1px solid var(--lms-border)}
+.lms-skills-dashboard{padding:12px 0 24px}.lms-skills-dashboard h3{margin:6px 0}.lms-skills-chart{display:flex;align-items:center;gap:clamp(24px,4vw,48px);margin-top:24px}.lms-skill-pie{width:190px;aspect-ratio:1;border-radius:50%;flex-shrink:0;border:1px solid var(--lms-border)}.lms-chart-legend{list-style:none;padding:0;margin:0;display:grid;gap:20px}.lms-chart-legend li{display:flex;gap:12px;align-items:flex-start}.lms-chart-key{width:12px;height:12px;flex-shrink:0;margin-top:7px;border:1px solid var(--lms-text);border-radius:50%}.lms-chart-legend p{margin:2px 0 0;font-size:13px;color:var(--lms-muted)}
+@media(max-width:599px){.lms-skills-chart{flex-direction:column;align-items:flex-start}.lms-report-metrics article{padding:16px 8px}.lms-report-metrics strong{font-size:24px}.lms-report-metrics span{font-size:12px}.lms-skill-pie{width:160px}}
