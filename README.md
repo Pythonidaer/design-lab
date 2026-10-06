@@ -50,3 +50,46 @@ The optional browser modelContext API is feature-detected. The site works
 without that API.
 
 ChatGPT hosting metadata and repository credentials are deliberately omitted.
+
+
+## Theme workshop and component export
+
+Open **Theme workshop** at the end of the navigation.
+
+1. Choose one of 20 original style presets.
+2. Adjust brand color, heading font, type scale, spacing, corners, hero arrangement, and image overlap.
+3. Select navigation, hero, cards, form, and/or image-text overlap.
+4. Use Mobile (390px), Tablet (768px), Desktop (1440px), or a custom width.
+5. Click **Export component ZIP** and unzip the download into your Cursor workspace.
+
+The ZIP contains:
+
+- `index.html`: assembled selected components
+- `components/*.html`: individual semantic HTML fragments
+- `theme.css`: shared CSS variables, component rules, and responsive styles
+- `theme.json`: editable settings and composition metadata
+- `coast.jpg`: the local sample asset
+- `CURSOR_HANDOFF.md`: implementation instructions
+
+The preview and export share the same component renderer and stylesheet. Files are framework-neutral HTML/CSS; Cursor can adapt them to React, Next.js, or another stack. There is no built-in React code generator or backend. Forms and sample calls to action need real application behavior. When exporting only some components, update links to sections you did not include. Repeated fragments need unique element IDs.
+
+The presets are interpretations for experimentation, not official implementations of design movements or certification of accessibility. Local font fallbacks can look different across operating systems.
+
+### Viewport previews
+
+Every lesson renders inside a same-origin sandboxed iframe. Media queries use that frame's width. **Fit** scales the displayed preview to the available workspace without changing its CSS viewport. Uncheck Fit for a full-size, scrollable preview. Custom widths are limited to 280–1920 CSS pixels.
+
+The responsive workshop uses a single-column mobile layout below 600px, a two-column card layout from 600–999px, and a three-column desktop card layout from 1000px. On mobile, overlap becomes a stacked composition. These are example design decisions, not universal device breakpoints.
+
+Viewport previews do not simulate device hardware, touch input, browser differences, or accessibility tools. Check real devices before shipping.
+
+### Saving
+
+**Save on this device** stores the workshop settings in this browser's local storage. **Load saved theme** restores them. Exported ZIP files are the portable handoff; device-local storage is not a cloud backup.
+
+### Sources for learning
+
+- StyleShift: https://styleshift.design/
+- Art Direction for the Web: https://www.smashingmagazine.com/printed-books/art-direction-for-the-web/
+- Inspired Design Decisions: https://www.smashingmagazine.com/author/andy-clarke/
+- Viewport concepts: https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/CSSOM_view/Viewport_concepts
