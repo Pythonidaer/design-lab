@@ -17,3 +17,5 @@
 
 .bench-tools input{padding:9px 10px;border:1px solid #cbd2df;border-radius:6px;font:inherit}.bench-tools h3{font-size:16px}.bench-tools .bench-saved p{margin:6px 0}.bench-tools>button{margin:4px 0}.control[hidden]{display:none}
 .bench-tools [hidden]{display:none!important}
+
+.component-mode #inspector-tabs,.component-mode .editor-label,.component-mode #element-inspector,.component-mode #layout-inspector,.component-mode #motion-inspector,.component-mode #palette-tools,.component-mode #workshop-tools{display:none!important}.component-mode #controls{display:block!important}#toggle-interactions[hidden]{display:none}
