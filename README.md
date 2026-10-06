@@ -93,3 +93,10 @@ Viewport previews do not simulate device hardware, touch input, browser differen
 - Art Direction for the Web: https://www.smashingmagazine.com/printed-books/art-direction-for-the-web/
 - Inspired Design Decisions: https://www.smashingmagazine.com/author/andy-clarke/
 - Viewport concepts: https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/CSSOM_view/Viewport_concepts
+
+### Full-screen Theme Workshop
+Opening Theme Workshop replaces the lesson chrome with an editor filling the browser viewport. Device icon buttons change the actual iframe viewport; Fit scales and centers its display. Transitions respect reduced-motion preferences. Hide the inspector for a larger canvas, or return using Design Lab.
+
+The inspector has Theme, Element, and Export panels. Click preview elements to edit local font, size, leading (line-height in pixels), tracking (letter-spacing), font-kerning, weight, colors, padding, corners, or image fit/focal point. Select parent section edits the containing section. Reset this element removes local overrides; Reset clears workshop overrides and restores default shared settings. These edits apply at all widths. Shared theme settings continue to style elements without local overrides.
+
+Save/load and ZIP exports preserve local overrides. `theme.json` schemaVersion 2 includes `elementOverrides`; `theme.css` scopes them to stable `data-dl-element` attributes. Preserve those attributes when converting exported markup to framework components. Preview selection outlines are editor-only and are excluded from exports. Theme-only saves from schema 1 remain compatible.
