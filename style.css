@@ -12,3 +12,7 @@
 
 .workshop-preview[data-dl-editing=false] [data-dl-element]:is(a,button,summary){cursor:pointer}
 .control .palette-lock{justify-content:flex-start;font-size:12px;font-weight:400;margin-top:8px;color:#657188}.palette-lock input{width:16px;height:16px}.palette-checks{font-size:12px;padding-left:18px;color:#657188}
+
+#motion-inspector{display:none}.workshop-mode[data-inspector-panel=motion] #motion-inspector{display:block}.workshop-mode[data-inspector-panel=motion] #controls,.workshop-mode[data-inspector-panel=motion] .editor-label,.workshop-mode[data-inspector-panel=motion] #element-inspector,.workshop-mode[data-inspector-panel=motion] #workshop-tools{display:none}#motion-inspector h3{font-size:15px;margin:0}.bench-tools{margin-top:20px;border-top:1px solid #dce1eb;padding-top:18px}.bench-tools label{display:grid;gap:6px;margin:12px 0;font-size:13px}.bench-tools input,.bench-tools select{width:100%}.bench-saved{padding:12px 0;border-top:1px solid #dce1eb}.bench-saved button{margin:6px 4px 0 0}.bench-tools [role=status]{font-size:13px}
+
+.bench-tools input{padding:9px 10px;border:1px solid #cbd2df;border-radius:6px;font:inherit}.bench-tools h3{font-size:16px}.bench-tools .bench-saved p{margin:6px 0}.bench-tools>button{margin:4px 0}.control[hidden]{display:none}
