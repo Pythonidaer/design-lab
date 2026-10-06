@@ -27,3 +27,5 @@ body.lms-export-body{margin:0}
 #lms-root .lms-outline li>button{gap:2px}#lms-root .lms-outline summary{font-size:14px}
 #lms-root .lms-outline button[aria-current=page]{box-shadow:none;background:color-mix(in srgb,var(--lms-brand) 14%,var(--lms-surface))!important}
 #lms-root .lms-preference{display:flex;align-items:center;gap:12px;margin:24px 0}.lms-preference input{width:20px;height:20px;accent-color:var(--lms-brand);flex-shrink:0}
+
+.lms-lesson-title{display:flex;align-items:center;justify-content:space-between;gap:10px;min-width:0}.lms-lesson-title>span{min-width:0}.lms-complete-icon{flex-shrink:0;color:var(--lms-text)}
