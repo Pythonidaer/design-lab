@@ -11,7 +11,7 @@ if(document.getElementById('preview-frame')!==frame)return;
 const doc=frame.contentDocument;doc.addEventListener('input',handlePreviewInput);doc.addEventListener('click',handlePreviewClick);doc.addEventListener('submit',e=>e.preventDefault());
 if(kind==='workshop'){doc.documentElement.scrollTop=oldScroll;mountWorkshopSelection();}
 if(group==='Style & motion')mountStyleExample(kind,state);
-if(kind==='componentBench')mountBenchInteractions(doc);
+if(kind==='componentBench'){mountBenchInteractions(doc);if(benchReplayPending){benchReplayPending=false;replayBenchEffect(doc);}}
 if(previewFocus){doc.querySelector(previewFocus)?.focus();previewFocus=null;}
 });
 frame.srcdoc=previewHead()+'<body class="'+(kind==='workshop'?'workshop-preview':kind==='direction'?'direction-preview':'')+'">'+(kind==='workshop'?h:'<div class="preview-content"><div class="demo" style="'+style+'">'+h+'</div>'+extra+'</div>')+'</body></html>';fitPreview();
