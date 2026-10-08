@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Guided theme builder — Design Lab</title>
+<meta name="description" content="Build your own theme, one decision at a time. Start with typography and carry your choices through layout, spacing, color, and details.">
+<link rel="stylesheet" href="guided-theme.css">
+<script src="guided-theme.js" defer></script>
+</head>
+<body style="margin:0">
+<div id="guided-theme">
+<header class="gt-header"><a href="./" class="gt-back">← Design Lab</a><strong>Guided theme builder</strong><span>Your choices, one step at a time.</span></header>
+<nav class="gt-steps" aria-label="Theme building steps"></nav>
+<div class="gt-workspace">
+<section class="gt-panel" aria-labelledby="gt-title"><div class="gt-step-heading"><span id="gt-position"></span><button type="button" id="gt-reset">Reset this step</button></div><h1 id="gt-title"></h1><p id="gt-explanation"></p><div id="gt-fields"></div><div class="gt-observe"><h2>What to notice</h2><p id="gt-observation"></p></div><details class="gt-learn"><summary>Learn the principle</summary><div id="gt-lesson"></div></details><div id="gt-summary"></div><div class="gt-actions"><button type="button" id="gt-previous">← Previous</button><button type="button" id="gt-next">Next: Layout →</button></div><p class="gt-session">Choices stay with you as you move between steps. Template creation and saving come later.</p></section>
+<section class="gt-canvas" aria-label="Live theme preview"><div class="gt-toolbar"><div class="gt-devices" aria-label="Preview device"></div><label class="gt-fit"><input type="checkbox" id="gt-fit" checked> Fit</label><output id="gt-viewport"></output></div><div class="gt-preview-scroll"><div class="gt-preview-stage"><iframe id="gt-preview" title="Your theme applied to a sample website" sandbox="allow-same-origin"></iframe></div></div><p class="gt-preview-note">Same sample content, your styles. Device icons change the preview viewport; Fit changes only its display scale.</p></section>
+</div>
+<div id="gt-status" class="gt-sr" role="status"></div>
+</div>
+</body>
+</html>

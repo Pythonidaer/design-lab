@@ -19,3 +19,5 @@
 .bench-tools [hidden]{display:none!important}
 
 .component-mode #inspector-tabs,.component-mode .editor-label,.component-mode #element-inspector,.component-mode #layout-inspector,.component-mode #motion-inspector,.component-mode #palette-tools,.component-mode #workshop-tools{display:none!important}.component-mode #controls{display:block!important}#toggle-interactions[hidden]{display:none}
+
+#topics .guided-builder-link{display:block;margin:6px 0;padding:12px;border:1px solid #dce1eb;border-radius:8px;color:#2334ea;font-size:14px;text-decoration:none}#topics .guided-builder-link span{display:block;font-size:12px;color:#526078;margin-top:3px}#topics .guided-builder-link:hover{background:#eef0ff}

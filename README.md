@@ -213,3 +213,25 @@ The Course outline toggle works at every viewport width and remembers its collap
 Learner navigation uses header icons for Reports, Settings and Course outline, with accessible names and tooltips. The Course/Reports tab bar is removed. Reports and Settings offer Back to course; returning preserves the selected lesson.
 
 Entering the LMS starts at the 1440px Desktop preview. Later device switches remain selected while editing the LMS. The learner header uses content height rather than sharing remaining viewport space with the main panel.
+
+
+## Guided theme builder
+
+Open **Build a theme → Guided theme builder**, or visit `guided-theme.html`.
+Start with Typography, then Layout, Spacing, Colors, Details, and Review. Every
+step remains available. Earlier decisions stay in the preview when moving
+forward or backward; Reset this step changes only the active step. There are
+no art-direction presets in this flow. Initial values are neutral editable
+starting points. Existing Theme Workshop and Component playground remain available.
+
+Mobile (390px), Tablet (768px), and Desktop (1440px) icons change the actual
+iframe viewport. Fit scales its display without changing its media queries.
+The fixed sample page has responsive cards and links that can be tested with
+a keyboard. The builder explains each decision and links to its educational
+source. Colors reports specific contrast pairs, not a complete audit.
+
+Choices are retained in memory during the flow, including when revisiting
+steps. Refreshing or leaving the page starts a new theme. Template creation,
+persistent saves, images, motion, and integration of saved library components
+are future development; this builder does not overwrite workshop saves.
+Local fonts and fallbacks can render differently across operating systems.
