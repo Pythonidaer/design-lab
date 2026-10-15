@@ -221,3 +221,7 @@ Open **Icon Library** in the main navigation, or **Icons** in the Theme Workshop
 `johnny-icons.js` supplies the shared renderer. `icons/johnny-ui-profile.json` records the source settings; `icons/johnny-ui-collection.json` holds the approved symbols and action mappings. Theme ZIPs include the icon profile, collection, and individual SVGs. The custom drawing workshop is not included. Other families remain available for comparison with their license notices.
 
 Saved favorites and imported symbols use browser-local storage. Existing users receive the approved family as the default once; later manual action assignments are retained.
+
+## Website design baseline
+
+Follow [Website Design Baseline v1.1](WEBSITE_DESIGN_BASELINE.md) for design and implementation work. It records the approved Johnny UI family, consistent icon-only menu controls, and project-specific navigation decisions.
