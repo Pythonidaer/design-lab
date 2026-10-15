@@ -213,3 +213,11 @@ The Course outline toggle works at every viewport width and remembers its collap
 Learner navigation uses header icons for Reports, Settings and Course outline, with accessible names and tooltips. The Course/Reports tab bar is removed. Reports and Settings offer Back to course; returning preserves the selected lesson.
 
 Entering the LMS starts at the 1440px Desktop preview. Later device switches remain selected while editing the LMS. The learner header uses content height rather than sharing remaining viewport space with the main panel.
+
+## Johnny UI icon library
+
+Open **Icon Library** in the main navigation, or **Icons** in the Theme Workshop inspector. The approved default family contains 20 SVGs: stem 7.5, general weight 4, head 23, length 27, corners 0, on a 32-unit grid. Preview size defaults to 32px; component icons inherit text color and scale to their context.
+
+`johnny-icons.js` supplies the shared renderer. `icons/johnny-ui-profile.json` records the source settings; `icons/johnny-ui-collection.json` holds the approved symbols and action mappings. Theme ZIPs include the icon profile, collection, and individual SVGs. The custom drawing workshop is not included. Other families remain available for comparison with their license notices.
+
+Saved favorites and imported symbols use browser-local storage. Existing users receive the approved family as the default once; later manual action assignments are retained.

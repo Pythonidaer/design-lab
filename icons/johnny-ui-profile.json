@@ -1,0 +1,13 @@
+{
+  "name": "Johnny UI",
+  "version": 1,
+  "direction": "soft",
+  "grid": 32,
+  "stem": 7.5,
+  "weight": 4,
+  "head": 23,
+  "length": 27,
+  "corner": 0,
+  "previewSize": 32,
+  "color": "#173747"
+}

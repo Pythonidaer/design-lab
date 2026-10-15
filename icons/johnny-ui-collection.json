@@ -1,0 +1,220 @@
+{
+  "schemaVersion": 1,
+  "profile": {
+    "name": "Johnny UI",
+    "version": 1,
+    "direction": "soft",
+    "grid": 32,
+    "stem": 7.5,
+    "weight": 4,
+    "head": 23,
+    "length": 27,
+    "corner": 0,
+    "previewSize": 32,
+    "color": "#173747"
+  },
+  "icons": [
+    {
+      "id": "johnny-ui:forward",
+      "family": "johnny-ui",
+      "name": "forward",
+      "label": "Forward",
+      "category": "arrows",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 32 32\" width=\"32\" height=\"32\" fill=\"currentColor\" aria-hidden=\"true\" focusable=\"false\"><g transform=\"rotate(0 16 16)\"><path d=\"M2.5,12.25L19.5,12.25L19.5,4.5L29.5,16L19.5,27.5L19.5,19.75L2.5,19.75Z\"/></g></svg>",
+      "file": "icons/johnny-ui-forward.svg"
+    },
+    {
+      "id": "johnny-ui:back",
+      "family": "johnny-ui",
+      "name": "back",
+      "label": "Back",
+      "category": "arrows",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 32 32\" width=\"32\" height=\"32\" fill=\"currentColor\" aria-hidden=\"true\" focusable=\"false\"><g transform=\"rotate(180 16 16)\"><path d=\"M2.5,12.25L19.5,12.25L19.5,4.5L29.5,16L19.5,27.5L19.5,19.75L2.5,19.75Z\"/></g></svg>",
+      "file": "icons/johnny-ui-back.svg"
+    },
+    {
+      "id": "johnny-ui:up",
+      "family": "johnny-ui",
+      "name": "up",
+      "label": "Up",
+      "category": "arrows",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 32 32\" width=\"32\" height=\"32\" fill=\"currentColor\" aria-hidden=\"true\" focusable=\"false\"><g transform=\"rotate(270 16 16)\"><path d=\"M2.5,12.25L19.5,12.25L19.5,4.5L29.5,16L19.5,27.5L19.5,19.75L2.5,19.75Z\"/></g></svg>",
+      "file": "icons/johnny-ui-up.svg"
+    },
+    {
+      "id": "johnny-ui:down",
+      "family": "johnny-ui",
+      "name": "down",
+      "label": "Down",
+      "category": "arrows",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 32 32\" width=\"32\" height=\"32\" fill=\"currentColor\" aria-hidden=\"true\" focusable=\"false\"><g transform=\"rotate(90 16 16)\"><path d=\"M2.5,12.25L19.5,12.25L19.5,4.5L29.5,16L19.5,27.5L19.5,19.75L2.5,19.75Z\"/></g></svg>",
+      "file": "icons/johnny-ui-down.svg"
+    },
+    {
+      "id": "johnny-ui:expand",
+      "family": "johnny-ui",
+      "name": "expand",
+      "label": "Expand",
+      "category": "arrows",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 32 32\" width=\"32\" height=\"32\" fill=\"currentColor\" aria-hidden=\"true\" focusable=\"false\"><g transform=\"rotate(90 16 16)\"><path d=\"M2.5,12.25L19.5,12.25L19.5,4.5L29.5,16L19.5,27.5L19.5,19.75L2.5,19.75Z\"/></g></svg>",
+      "file": "icons/johnny-ui-expand.svg"
+    },
+    {
+      "id": "johnny-ui:menu",
+      "family": "johnny-ui",
+      "name": "menu",
+      "label": "Menu",
+      "category": "ui",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 32 32\" width=\"32\" height=\"32\" fill=\"currentColor\" aria-hidden=\"true\" focusable=\"false\"><path d=\"M4,5.666666666666667L28,5.666666666666667L28,8.333333333333334L4,8.333333333333334Z\"/><path d=\"M4,14.666666666666666L28,14.666666666666666L28,17.333333333333332L4,17.333333333333332Z\"/><path d=\"M4,23.666666666666668L28,23.666666666666668L28,26.333333333333332L4,26.333333333333332Z\"/></svg>",
+      "file": "icons/johnny-ui-menu.svg"
+    },
+    {
+      "id": "johnny-ui:close",
+      "family": "johnny-ui",
+      "name": "close",
+      "label": "Close",
+      "category": "ui",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 32 32\" width=\"32\" height=\"32\" fill=\"currentColor\" aria-hidden=\"true\" focusable=\"false\"><g transform=\"rotate(45 16 16)\"><path d=\"M5,14.666666666666666L27,14.666666666666666L27,17.333333333333332L5,17.333333333333332Z\"/><path d=\"M14.666666666666666,5L17.333333333333332,5L17.333333333333332,27L14.666666666666666,27Z\"/></g></svg>",
+      "file": "icons/johnny-ui-close.svg"
+    },
+    {
+      "id": "johnny-ui:search",
+      "family": "johnny-ui",
+      "name": "search",
+      "label": "Search",
+      "category": "ui",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 32 32\" width=\"32\" height=\"32\" fill=\"currentColor\" aria-hidden=\"true\" focusable=\"false\"><circle cx=\"12.5\" cy=\"13\" r=\"8.5\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.2\"/><path d=\"M19 20L28 29\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.2\" stroke-linecap=\"square\" stroke-linejoin=\"miter\"/></svg>",
+      "file": "icons/johnny-ui-search.svg"
+    },
+    {
+      "id": "johnny-ui:settings",
+      "family": "johnny-ui",
+      "name": "settings",
+      "label": "Settings",
+      "category": "ui",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 32 32\" width=\"32\" height=\"32\" fill=\"currentColor\" aria-hidden=\"true\" focusable=\"false\"><path fill-rule=\"evenodd\" d=\"M29,16L26.29824544423392,18.048448381169347L25.70073509136851,20.018176039833442L26.809104959933087,23.222413029254827L25.19238815542512,25.192388155425117L21.833487446705824,24.730430929176727L20.018176039833442,25.70073509136851L18.536174186209667,28.750208645241997L16,29L13.951551618830655,26.29824544423392L11.981823960166558,25.70073509136851L8.777586970745174,26.809104959933087L6.8076118445748826,25.19238815542512L7.269569070823273,21.833487446705824L6.299264908631489,20.018176039833442L3.2497913547580044,18.53617418620967L3,16L5.70175455576608,13.951551618830653L6.299264908631487,11.981823960166558L5.190895040066909,8.777586970745174L6.807611844574881,6.8076118445748826L10.166512553294178,7.269569070823275L11.981823960166551,6.299264908631491L13.463825813790328,3.249791354758006L15.999999999999998,3L18.048448381169347,5.70175455576608L20.018176039833445,6.299264908631491L23.222413029254824,5.190895040066909L25.192388155425114,6.807611844574881L24.730430929176727,10.166512553294178L25.700735091368507,11.981823960166551L28.750208645241994,13.463825813790326Z M10.4 16a5.6 5.6 0 1 0 11.2 0a5.6 5.6 0 1 0 -11.2 0Z\"/></svg>",
+      "file": "icons/johnny-ui-settings.svg"
+    },
+    {
+      "id": "johnny-ui:copy",
+      "family": "johnny-ui",
+      "name": "copy",
+      "label": "Copy",
+      "category": "ui",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 32 32\" width=\"32\" height=\"32\" fill=\"currentColor\" aria-hidden=\"true\" focusable=\"false\"><path d=\"M4 22V4H21V7\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.2\" stroke-linecap=\"square\" stroke-linejoin=\"miter\"/><rect x=\"11\" y=\"11\" width=\"17\" height=\"18\" rx=\"0\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.2\"/></svg>",
+      "file": "icons/johnny-ui-copy.svg"
+    },
+    {
+      "id": "johnny-ui:folder",
+      "family": "johnny-ui",
+      "name": "folder",
+      "label": "Folder",
+      "category": "ui",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 32 32\" width=\"32\" height=\"32\" fill=\"currentColor\" aria-hidden=\"true\" focusable=\"false\"><path d=\"M3,5L12,5L16,9L29,9L29,26L3,26Z\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.2\" stroke-linejoin=\"round\"/><path d=\"M4 13H28\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.2\" stroke-linecap=\"square\" stroke-linejoin=\"miter\"/></svg>",
+      "file": "icons/johnny-ui-folder.svg"
+    },
+    {
+      "id": "johnny-ui:document",
+      "family": "johnny-ui",
+      "name": "document",
+      "label": "Document",
+      "category": "ui",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 32 32\" width=\"32\" height=\"32\" fill=\"currentColor\" aria-hidden=\"true\" focusable=\"false\"><path d=\"M7 3H20L26 9V29H7Z M19 3V10H26 M12 16H21 M12 22H21\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.2\" stroke-linecap=\"square\" stroke-linejoin=\"miter\"/></svg>",
+      "file": "icons/johnny-ui-document.svg"
+    },
+    {
+      "id": "johnny-ui:download",
+      "family": "johnny-ui",
+      "name": "download",
+      "label": "Download",
+      "category": "arrows",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 32 32\" width=\"32\" height=\"32\" fill=\"currentColor\" aria-hidden=\"true\" focusable=\"false\"><g transform=\"translate(4 -3) scale(.75)\"><g transform=\"rotate(90 16 16)\"><path d=\"M2.5,12.25L19.5,12.25L19.5,4.5L29.5,16L19.5,27.5L19.5,19.75L2.5,19.75Z\"/></g></g><path d=\"M5 23V29H27V23\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.2\" stroke-linecap=\"square\" stroke-linejoin=\"miter\"/></svg>",
+      "file": "icons/johnny-ui-download.svg"
+    },
+    {
+      "id": "johnny-ui:upload",
+      "family": "johnny-ui",
+      "name": "upload",
+      "label": "Upload",
+      "category": "arrows",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 32 32\" width=\"32\" height=\"32\" fill=\"currentColor\" aria-hidden=\"true\" focusable=\"false\"><g transform=\"translate(4 -3) scale(.75)\"><g transform=\"rotate(270 16 16)\"><path d=\"M2.5,12.25L19.5,12.25L19.5,4.5L29.5,16L19.5,27.5L19.5,19.75L2.5,19.75Z\"/></g></g><path d=\"M5 23V29H27V23\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.2\" stroke-linecap=\"square\" stroke-linejoin=\"miter\"/></svg>",
+      "file": "icons/johnny-ui-upload.svg"
+    },
+    {
+      "id": "johnny-ui:confirm",
+      "family": "johnny-ui",
+      "name": "confirm",
+      "label": "Confirm",
+      "category": "ui",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 32 32\" width=\"32\" height=\"32\" fill=\"currentColor\" aria-hidden=\"true\" focusable=\"false\"><path d=\"M5 16L12 23L28 7\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.2\" stroke-linecap=\"square\" stroke-linejoin=\"miter\"/></svg>",
+      "file": "icons/johnny-ui-confirm.svg"
+    },
+    {
+      "id": "johnny-ui:warning",
+      "family": "johnny-ui",
+      "name": "warning",
+      "label": "Warning",
+      "category": "ui",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 32 32\" width=\"32\" height=\"32\" fill=\"currentColor\" aria-hidden=\"true\" focusable=\"false\"><path d=\"M16 4L29 28H3Z\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.2\" stroke-linejoin=\"round\"/><path d=\"M16 12V19\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.2\" stroke-linecap=\"square\" stroke-linejoin=\"miter\"/><circle cx=\"16\" cy=\"24\" r=\"1.2100000000000002\"/></svg>",
+      "file": "icons/johnny-ui-warning.svg"
+    },
+    {
+      "id": "johnny-ui:play",
+      "family": "johnny-ui",
+      "name": "play",
+      "label": "Play",
+      "category": "ui",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 32 32\" width=\"32\" height=\"32\" fill=\"currentColor\" aria-hidden=\"true\" focusable=\"false\"><path d=\"M7,3L29,16L7,29Z\"/></svg>",
+      "file": "icons/johnny-ui-play.svg"
+    },
+    {
+      "id": "johnny-ui:pause",
+      "family": "johnny-ui",
+      "name": "pause",
+      "label": "Pause",
+      "category": "ui",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 32 32\" width=\"32\" height=\"32\" fill=\"currentColor\" aria-hidden=\"true\" focusable=\"false\"><path d=\"M6,4L10,4L10,28L6,28Z\"/><path d=\"M22,4L26,4L26,28L22,28Z\"/></svg>",
+      "file": "icons/johnny-ui-pause.svg"
+    },
+    {
+      "id": "johnny-ui:grid",
+      "family": "johnny-ui",
+      "name": "grid",
+      "label": "Grid",
+      "category": "ui",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 32 32\" width=\"32\" height=\"32\" fill=\"currentColor\" aria-hidden=\"true\" focusable=\"false\"><path d=\"M4,4L13,4L13,13L4,13Z\"/><path d=\"M19,4L28,4L28,13L19,13Z\"/><path d=\"M4,19L13,19L13,28L4,28Z\"/><path d=\"M19,19L28,19L28,28L19,28Z\"/></svg>",
+      "file": "icons/johnny-ui-grid.svg"
+    },
+    {
+      "id": "johnny-ui:home",
+      "family": "johnny-ui",
+      "name": "home",
+      "label": "Home",
+      "category": "ui",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 32 32\" width=\"32\" height=\"32\" fill=\"currentColor\" aria-hidden=\"true\" focusable=\"false\"><path d=\"M3 14L16 3L29 14 M6 12V29H13V20H19V29H26V12\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.2\" stroke-linecap=\"square\" stroke-linejoin=\"miter\"/></svg>",
+      "file": "icons/johnny-ui-home.svg"
+    }
+  ],
+  "actions": {
+    "Forward": "johnny-ui:forward",
+    "Back": "johnny-ui:back",
+    "Up": "johnny-ui:up",
+    "Down": "johnny-ui:down",
+    "Expand": "johnny-ui:expand",
+    "Menu": "johnny-ui:menu",
+    "Close": "johnny-ui:close",
+    "Search": "johnny-ui:search",
+    "Settings": "johnny-ui:settings",
+    "Copy": "johnny-ui:copy",
+    "Folder": "johnny-ui:folder",
+    "Document": "johnny-ui:document",
+    "Download": "johnny-ui:download",
+    "Upload": "johnny-ui:upload",
+    "Confirm": "johnny-ui:confirm",
+    "Warning": "johnny-ui:warning",
+    "Play": "johnny-ui:play",
+    "Pause": "johnny-ui:pause",
+    "Grid": "johnny-ui:grid",
+    "Home": "johnny-ui:home"
+  }
+}

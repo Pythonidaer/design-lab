@@ -19,3 +19,5 @@
 .bench-tools [hidden]{display:none!important}
 
 .component-mode #inspector-tabs,.component-mode .editor-label,.component-mode #element-inspector,.component-mode #layout-inspector,.component-mode #motion-inspector,.component-mode #palette-tools,.component-mode #workshop-tools{display:none!important}.component-mode #controls{display:block!important}#toggle-interactions[hidden]{display:none}
+
+.icon-library-link{display:block;padding:12px;margin-top:12px;font-size:14px;font-weight:700}.dl-ui-icon{width:1.2em;height:1.2em;vertical-align:middle;flex:none}.theme-icon-samples{display:flex;gap:18px;margin:20px 0;flex-wrap:wrap}.theme-icon-samples svg{width:28px;height:28px}#icon-inspector{display:none}.workshop-mode[data-inspector-panel=icons] #icon-inspector{display:block}.workshop-mode[data-inspector-panel=icons] :is(#controls,.editor-label,#element-inspector,#workshop-tools,#palette-tools,#layout-inspector,#motion-inspector){display:none}
