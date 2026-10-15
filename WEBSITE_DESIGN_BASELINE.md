@@ -54,6 +54,7 @@ Do not replace these defaults with another mandatory recipe, such as serif fonts
 - Avoid formulas such as “Less X. More Y,” “Where X meets Y,” and “This isn't X. It's Y.”
 - Avoid em dashes as a default stylistic habit.
 - Remove redundant eyebrow labels and subheadings.
+- Use plain numbers without leading zeros for visible navigation, steps, sections, project labels, and counters: `1, 2, 3`, not `01, 02, 03`. Do not add zero-padding for decoration or alignment. Preserve leading zeros only where a meaningful format requires them, such as dates, times, or fixed-format identifiers; document intentional project-specific exceptions.
 
 Examples: “Unlock your potential” → “Plan your website launch.” “A starting point. Room for identity” → “Baseline design rules.”
 
@@ -184,5 +185,7 @@ Each project should develop its own typography, palette, imagery, composition, c
 | Johnny UI is the approved default for these projects | Preserve the user's chosen symbols and geometry | Another intentionally reviewed project family | Compare actual SVGs and profile to the approved selection |
 | Icon Library is item 31 in Design Lab | New destinations belong to the existing navigation system | A separate navigation system only with a clear purpose | Check numbering, styling, wrapping, focus, and mobile scrolling |
 | Offscreen focus scrolling is suppressed | Address a likely source of the reported opening glitch | Move focus after a suitable state change, with keyboard behavior preserved | Code change deployed; Safari visual confirmation is still pending |
+
+| Plain visible numbering: 1, 2, 3 | User-approved baseline preference across websites; avoid decorative zero-padding | Leading zeros only for meaningful formats or documented project-specific exceptions | Review visible labels and number formatting; preference confirmed, existing sites not audited by this rules-only change |
 
 This record distinguishes user-approved design preferences from unverified visual fixes. Do not treat deployment or code checks as proof that the reported drawer glitch is resolved.
