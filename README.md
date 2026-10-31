@@ -225,3 +225,13 @@ Saved favorites and imported symbols use browser-local storage. Existing users r
 ## Website design baseline
 
 Follow [Website Design Baseline v1.1](WEBSITE_DESIGN_BASELINE.md) for design and implementation work. It records the approved Johnny UI family, consistent icon-only menu controls, and project-specific navigation decisions.
+
+### Recessed navigation component
+
+Choose **Component playground → Hamburger menus → Recessed reveal**. The foreground scales and shifts to reveal an opaque navigation surface. Accent, corners, duration and easing reuse the existing `--dl-*` tokens; naming, collection saves and standalone ZIP export use the normal component pipeline. For a slower study, set Duration to 1000 ms and compare easing curves.
+
+This is an original implementation inspired by [Details.so Reveal Navigation](https://www.details.so/vault/navigation-06), not copied source. Menu labels use the Carbon scale (28/36 px on narrow containers, 32/40 px on wide containers), expressed in rem, while inheriting the component collection's font. IBM Plex is not imposed on exported themes.
+
+Design choices: this variant intentionally moves the foreground instead of sliding a drawer over it; the other menu variants retain their behavior. It uses the bench's configurable duration rather than overriding it with the baseline's one-second preference. Container queries keep the reveal inside mobile, tablet and desktop previews. The dark surface, icon-only toggle, backdrop dismissal, Escape, contained keyboard focus, background inertness and reduced-motion handling travel with the export. No document scroll lock is needed because the interaction is local to a bounded example. Preview state changes and selection of other examples do not alter the host's navigation.
+
+Check the component at all three preview widths, interrupt opening with a second toggle, close using Escape and the dimmed foreground, follow an example destination, and load a saved copy. Profile on target devices before treating animation smoothness as a performance guarantee.
